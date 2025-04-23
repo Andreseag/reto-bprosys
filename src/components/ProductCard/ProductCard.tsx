@@ -1,44 +1,43 @@
 import React from "react";
-import Link from "next/link";
 import { AiOutlineCreditCard } from "react-icons/ai";
-import { motion } from "framer-motion";
 import { Product } from "@/types";
+import {
+  Card,
+  CardBody,
+  IconWrapper,
+  Title,
+  Description,
+  Actions,
+  StyledLink,
+} from "./ProductCard.styles";
 
 interface ProductCardProps {
   product: Product;
 }
 
-const ProductCard = ({ product }: ProductCardProps) => {
+const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   return (
-    <motion.div
+    <Card
       layout
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 0, scale: 0.95 }}
-      transition={{ duration: 0.3 }}
-      className="card border border-base-300 rounded-none h-[300px] overflow-hidden flex flex-col">
-      <div className="card-body flex flex-col justify-between p-6">
-        <div className="text-center">
-          <div className="flex justify-center mb-4">
-            <AiOutlineCreditCard size={50} />
-          </div>
+      transition={{ duration: 0.3 }}>
+      <CardBody>
+        <IconWrapper>
+          <AiOutlineCreditCard size={50} />
+        </IconWrapper>
 
-          <h2 className="text-2xl mb-2">{product.name}</h2>
-          {product.description && (
-            <p className="text-gray-600 mb-2 text-base">
-              {product.description}
-            </p>
-          )}
-        </div>
-        <div className="card-actions mt-4">
-          <Link
-            href={`/products/${product.id}`}
-            className="btn bg-[#77F7D3] text-black border-none hover:bg-[#66e6c2] py-3 px-6 rounded-none shadow-none h-[50px] w-full text-center">
-            Ver Detalles
-          </Link>
-        </div>
-      </div>
-    </motion.div>
+        <Title>{product.name}</Title>
+        {product.description && (
+          <Description>{product.description}</Description>
+        )}
+
+        <Actions>
+          <StyledLink href={`/products/${product.id}`}>Ver Detalles</StyledLink>
+        </Actions>
+      </CardBody>
+    </Card>
   );
 };
 

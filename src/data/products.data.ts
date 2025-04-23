@@ -51,4 +51,74 @@ export const products: Product[] = [
     description:
       "Un fondo para inversores que buscan altos rendimientos y están dispuestos a asumir riesgos.",
   },
+  {
+    id: 6,
+    name: "Cuenta de Ahorro Premium",
+    type: "Cuenta",
+    interestRate: "1.5%",
+    category: "Cuentas",
+    riskLevel: "Bajo",
+    description:
+      "Una cuenta de ahorro con beneficios exclusivos y una tasa de interés competitiva.",
+  },
+  {
+    id: 7,
+    name: "Tarjeta de Débito Internacional",
+    type: "Tarjeta",
+    interestRate: "0%",
+    category: "Tarjetas",
+    riskLevel: null,
+    description:
+      "Una tarjeta de débito aceptada en todo el mundo, ideal para viajeros frecuentes.",
+  },
+  {
+    id: 8,
+    name: "Fondo de Inversión Balanceado",
+    type: "Fondo",
+    interestRate: "6%",
+    category: "Fondos",
+    riskLevel: "Medio",
+    description:
+      "Un fondo que combina estabilidad y crecimiento para inversores moderados.",
+  },
+  {
+    id: 9,
+    name: "Seguro de Auto",
+    type: "Seguro",
+    interestRate: null,
+    category: "Seguros",
+    riskLevel: "Bajo",
+    description:
+      "Protege tu vehículo con un seguro completo y asistencia en carretera.",
+  },
+  {
+    id: 10,
+    name: "Cuenta de Ahorro Infantil",
+    type: "Cuenta",
+    interestRate: "1%",
+    category: "Cuentas",
+    riskLevel: "Bajo",
+    description:
+      "Una cuenta diseñada para enseñar a los niños la importancia del ahorro.",
+  },
+  {
+    id: 11,
+    name: "Tarjeta de Crédito Platino",
+    type: "Tarjeta",
+    interestRate: "20%",
+    category: "Tarjetas",
+    riskLevel: "Medio",
+    description:
+      "Una tarjeta de crédito con beneficios exclusivos para clientes premium.",
+  },
+  {
+    id: 12,
+    name: "Fondo de Inversión en Energías Renovables",
+    type: "Fondo",
+    interestRate: "8%",
+    category: "Fondos",
+    riskLevel: "Alto",
+    description:
+      "Un fondo enfocado en proyectos de energías renovables con alto potencial de crecimiento.",
+  },
 ];

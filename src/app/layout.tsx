@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import Link from "next/link";
 import "./globals.css";
+import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,39 +17,11 @@ export default function RootLayout({
     <html lang="en" data-theme="light">
       <body className="min-h-screen bg-base-100">
         {/* Header */}
-        <header className="navbar bg-base-200 px-4">
-          <div className="flex-1">
-            <Link href="/" className="btn btn-ghost normal-case text-xl">
-              FinanBrand
-            </Link>
-          </div>
-          <div className="flex-none">
-            <ul className="menu menu-horizontal px-1">
-              <li>
-                <Link href="/">Inicio</Link>
-              </li>
-              <li>
-                <Link href="/about">Nosotros</Link>
-              </li>
-              <li>
-                <Link href="/contact">Contacto</Link>
-              </li>
-            </ul>
-          </div>
-        </header>
-
+        <Header />
         {/* Main Content */}
         <main>{children}</main>
-
         {/* Footer */}
-        <footer className="bg-base-200 text-center py-6 mt-20">
-          <p className="text-lg font-semibold text-gray-700">
-            © {new Date().getFullYear()} FinanBrand
-          </p>
-          <p className="text-md text-gray-500">
-            Todos los derechos reservados.
-          </p>
-        </footer>
+        <Footer />
       </body>
     </html>
   );
