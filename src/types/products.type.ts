@@ -5,6 +5,7 @@ export interface Product {
   interestRate: string | null;
   category: string;
   riskLevel: string | null;
+  description: string;
 }
 
 export enum Category {
