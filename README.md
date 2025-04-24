@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Reto BProSys
 
-## Getting Started
+Esta es una aplicación web desarrollada como parte del reto **BProSys**. La aplicación permite explorar productos financieros, ver detalles de cada producto y navegar a través de un catálogo interactivo.
 
-First, run the development server:
+Para ver el sitio en el entorno productivo puede acceder en el navegador a [https://reto-bprosy s-ocds.vercel.app/](https://reto-bprosys-ocds.vercel.app/)
+
+## Instalación
+
+1. Clona este repositorio:
+
+   ```bash
+   git clone https://github.com/tu-usuario/reto-bprosys.git
+   cd reto-bprosys
+   ```
+
+2. Instala las dependencias:
+
+```bash
+npm install
+```
+
+3. Inicia el servidor de desarrollo:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Abre la aplicación en tu navegador en [http://localhost:3000](vscode-file://vscode-app/c:/Users/castr/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-sandbox/workbench/workbench.html).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Características
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Catálogo de productos financieros**: Explora una lista de productos financieros como cuentas, tarjetas, fondos y seguros.
+- **Página de detalles**: Visualiza información detallada de cada producto, incluyendo tasas de interés, nivel de riesgo y beneficios.
+- **Diseño responsivo**: La aplicación está optimizada para dispositivos móviles, tabletas y escritorios.
+- **Animaciones**: Se utilizan animaciones suaves para mejorar la experiencia del usuario.
+- **Filtros y navegación**: Navega fácilmente entre productos y categorías.
 
-## Learn More
+## Tecnologías utilizadas
 
-To learn more about Next.js, take a look at the following resources:
+### Frameworks y Librerías
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **[Next.js](https://nextjs.org/)**: Framework de React para aplicaciones web modernas.
+- **[React](https://reactjs.org/)**: Biblioteca para construir interfaces de usuario.
+- **[Framer Motion](https://www.framer.com/motion/)**: Librería para animaciones en React.
+- **[Tailwind CSS](https://tailwindcss.com/)**: Framework de utilidades CSS para un diseño rápido y responsivo.
+- **[styled-components](https://styled-components.com/)**: Librería para estilos en componentes de React.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Herramientas adicionales
 
-## Deploy on Vercel
+- **TypeScript**: Lenguaje de programación tipado para mejorar la calidad del código.
+- **React Icons**: Iconos listos para usar en React.
+- **ESLint y Prettier**: Herramientas para mantener un código limpio y consistente.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Descripción de Carpetas y Archivos
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### `app/`
+
+- Contiene las páginas principales de la aplicación.
+- Usa el sistema de enrutamiento de Next.js para definir las rutas.
+- Incluye el layout principal (`layout.tsx`) y las páginas dinámicas para los productos (`products/[productId]/page.tsx`).
+
+### `components/`
+
+- Contiene los componentes reutilizables de la aplicación, organizados por funcionalidad.
+- Cada componente tiene su archivo de estilos correspondiente (`.styles.ts`).
+
+### `data/`
+
+- Contiene datos estáticos, como la lista de productos financieros (`products.data.ts`).
+
+### `styles/`
+
+- Contiene los estilos globales de la aplicación (`globals.css`).
+
+### `types/`
+
+- Define los tipos TypeScript utilizados en la aplicación para garantizar un código tipado y seguro.
+
+### `utils/`
+
+- Contiene funciones auxiliares reutilizables que pueden ser utilizadas en diferentes partes de la aplicación.
