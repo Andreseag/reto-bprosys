@@ -4,11 +4,11 @@ import styled from "styled-components";
 import Link from "next/link";
 
 export const Container = styled.div.attrs({
-  className: "min-h-screen bg-base-100 px-10 py-10",
+  className: "min-h-screen bg-base-100 p-4 lg:p-10",
 })``;
 
 export const Content = styled.div.attrs({
-  className: "mx-auto p-8",
+  className: "mx-auto",
 })``;
 
 export const IconWrapper = styled.div.attrs({
