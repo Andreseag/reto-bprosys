@@ -1,26 +1,21 @@
 import ProductDetail from "@/components/ProductDetail/ProductDetail";
 import ProductNotFound from "@/components/ProductNotFound/ProductNotFound";
 import { products } from "@/data";
+import { JSX } from "react";
 
 async function fetchProduct(productId: string) {
-  // Simulación de datos (puedes reemplazar esto con una llamada real a una API)
-  const product = products.find((p) => p.id === parseInt(productId));
-
-  return product;
+  return products.find((p) => p.id === parseInt(productId, 10));
 }
 
-export default async function ProductPage({
+export default async function Page({
   params,
-}: {
-  params: { productId: string };
-}) {
-  const product = await fetchProduct(params.productId);
+}: Readonly<{ params: Promise<{ productId: string }> }>): Promise<JSX.Element> {
+  const { productId } = await params;
+
+  const product = await fetchProduct(productId);
 
   if (!product) {
-    return (
-      <ProductNotFound /> // Componente que muestra un mensaje de error o una página 404
-    );
+    return <ProductNotFound />;
   }
-
   return <ProductDetail product={product} />;
 }

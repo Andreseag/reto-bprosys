@@ -4,11 +4,11 @@ import { motion } from "framer-motion";
 
 export const Section = styled.section.attrs({
   className:
-    "flex flex-col md:flex-row items-center justify-between gap-8 bg-[#0D131B] text-white min-h-[650px]",
+    "flex flex-col flex-row items-center justify-between gap-8 bg-[#0D131B] text-white min-h-[650px]",
 })``;
 
 export const Content = styled.div.attrs({
-  className: "w-full md:w-3/5 text-center md:text-left md:px-20",
+  className: "w-full lg:w-3/5 text-center md:text-left md:px-20",
 })``;
 
 export const Heading = styled(motion.h1).attrs({
@@ -33,5 +33,5 @@ export const SecondaryButton = styled.button.attrs({
 })``;
 
 export const ImageWrapper = styled(motion.div).attrs({
-  className: "w-full md:w-2/5 h-[650px] bg-cover bg-center",
+  className: "w-full md:w-2/5 h-[650px] hidden lg:flex bg-cover bg-center",
 })``;

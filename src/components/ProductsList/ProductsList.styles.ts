@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Section = styled.section.attrs({
-  className: "servies-section px-20 mt-20",
+  className: "servies-section px-4 lg:px-20 mt-20",
 })``;
 
 export const Title = styled.h2.attrs({
