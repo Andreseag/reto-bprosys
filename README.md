@@ -9,7 +9,7 @@ Para ver el sitio en el entorno productivo puede acceder en el navegador a [http
 1. Clona este repositorio:
 
    ```bash
-   git clone https://github.com/tu-usuario/reto-bprosys.git
+   git clone https://github.com/Andreseag/reto-bprosys.git
    cd reto-bprosys
    ```
 
